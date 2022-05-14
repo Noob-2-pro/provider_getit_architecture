@@ -8,7 +8,7 @@ class Post {
 
   // we can aslo use static method instead of factory ,
   // with static ww can make it asyncronous and return futures too , although we won't use it in this tutorial
-  // although prefer factory method
+  // although prefer factory method as in comment .dart
   static Post fromJson(Map<String, dynamic> json) {
     return Post(
       userId: json['userId'],
