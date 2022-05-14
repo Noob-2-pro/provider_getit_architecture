@@ -33,11 +33,11 @@ class CommentItem extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
           Text(
-            comment.name??'',
+            comment.name,
             style: const TextStyle(fontWeight: FontWeight.bold),
           ),
           UIHelper.verticalSpaceSmall(),
-          Text(comment.body??''),
+          Text(comment.body),
         ],
       ),
     );

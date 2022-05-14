@@ -1,16 +1,21 @@
 class Post {
-  int? userId;
-  int? id;
-  String? title;
-  String? body;
+  int userId;
+  int id;
+  String title;
+  String body;
 
-  Post({required this.userId,required  this.id,required  this.title,required  this.body});
+  Post({required this.userId, required this.id, required this.title, required this.body});
 
-  Post.fromJson(Map<String, dynamic> json) {
-    userId = json['userId'];
-    id = json['id'];
-    title = json['title'];
-    body = json['body'];
+  // we can aslo use static method instead of factory ,
+  // with static ww can make it asyncronous and return futures too , although we won't use it in this tutorial
+  // although prefer factory method
+  static Post fromJson(Map<String, dynamic> json) {
+    return Post(
+      userId: json['userId'],
+      id: json['id'],
+      title: json['title'],
+      body: json['body'],
+    );
   }
 
   Map<String, dynamic> toJson() {

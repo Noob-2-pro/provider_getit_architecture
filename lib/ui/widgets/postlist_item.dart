@@ -22,10 +22,10 @@ class PostListItem extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
             Text(
-              post.title??'',
+              post.title,
               style: const TextStyle(fontWeight: FontWeight.w900, fontSize: 16.0),
             ),
-            Text(post.body??'', maxLines: 2, overflow: TextOverflow.ellipsis)
+            Text(post.body, maxLines: 2, overflow: TextOverflow.ellipsis)
           ],
         ),
       ),
